@@ -1,209 +1,173 @@
 # s.e.h.a.t Website
 
-Your comprehensive health companion for all your healthcare needs.
+Your health companion for all your healthcare needs.
 
 ## 🎯 Overview
 
-s.e.h.a.t is a modern, single-page landing website showcasing India's revolutionary healthcare management platform. The website highlights how s.e.h.a.t addresses critical healthcare challenges through digitized health histories, emergency solutions, and everyday health management.
-
-## 🌟 Features
-
-- **Modern Single-Page Design**: All content on one seamless scrolling page
-- **Modular Component Architecture**: Easy to maintain and update
-- **Responsive Design**: Works perfectly on all devices
-- **Smooth Animations**: Scroll-based reveals and transitions
-- **Brand Colors**: White (#FFFFFF) and Pink (#FF5598)
-- **Fast Loading**: Optimized performance with modular imports
+s.e.h.a.t is a comprehensive healthcare platform that solves critical healthcare challenges in India through:
+- Digitized health histories
+- Emergency solutions
+- Institutional health record management
+- Everyday health management tools
 
 ## 📁 Project Structure
 
 ```
 s.e.h.a.t-website/
-├── Assets/
-│   └── s.e.h.a.t Branding/    # Logo, icons, and brand assets
-├── src/
-│   ├── components/            # HTML components
-│   │   ├── header.html
-│   │   ├── hero.html
-│   │   ├── problems.html
-│   │   ├── solutions.html
-│   │   ├── benefits.html
-│   │   └── cta.html
-│   ├── css/                   # Modular CSS files
-│   │   ├── variables.css      # Design system & colors
-│   │   ├── reset.css          # Base styles & animations
-│   │   ├── header.css         # Navigation styles
-│   │   ├── hero.css           # Hero section
-│   │   ├── problems.css       # Problems section
-│   │   ├── solutions.css      # Solutions section
-│   │   ├── benefits.css       # Benefits section
-│   │   ├── cta.css            # Call-to-action section
-│   │   └── footer.css         # Footer styles
-│   └── js/                    # JavaScript modules
-│       ├── main.js            # Core application logic
-│       └── utils/             # Utility functions
-│           ├── navigation.js
-│           ├── smoothScroll.js
-│           ├── scrollReveal.js
-│           └── componentLoader.js
-├── footer/                    # Legacy footer files
-├── index.html                 # Main HTML file
-├── styles.css                 # Main CSS imports
-├── script.js                  # Main JavaScript entry
-└── README.md                  # This file
+├── index.html              # Main HTML file
+├── styles.css              # Custom project-specific styles
+├── script.js               # Custom project-specific scripts
+├── css/                    # Modular CSS components
+│   ├── variables.css       # CSS variables and design tokens
+│   ├── base.css           # Reset and base styles
+│   ├── navigation.css     # Navigation component styles
+│   ├── hero.css           # Hero section styles
+│   ├── buttons.css        # Button component styles
+│   ├── cards.css          # Card component styles
+│   ├── sections.css       # Section layout styles
+│   ├── footer.css         # Footer component styles
+│   └── animations.css     # Animation utilities
+├── js/                     # Modular JavaScript components
+│   ├── navigation.js      # Navigation functionality
+│   ├── animations.js      # Scroll animations & reveals
+│   ├── utils.js           # Utility functions
+│   └── app.js             # Main application module
+└── public/
+    └── assets/
+        └── s.e.h.a.t Branding/  # Brand assets (logos, icons)
 ```
+
+## 🎨 Design System
+
+### Colors
+- Primary: `#ff5598` (Pink)
+- White: `#ffffff`
+- Dark: `#1a1a1a`
+- Gray: `#666666`
+
+### Typography
+- Font Family: System font stack for optimal performance
+- Base Size: 16px
+- Headings: Bold, scaled responsively
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-
-- A modern web browser (Chrome, Firefox, Safari, Edge)
-- A local web server (Live Server, Python HTTP server, or similar)
+- A modern web browser
+- (Optional) Local web server for development
 
 ### Installation
 
-1. Clone or download the repository
-2. Open the project folder
-3. Start a local development server:
+1. Clone the repository:
+```bash
+git clone https://github.com/Anavify/s.e.h.a.t-website.git
+cd s.e.h.a.t-website
+```
 
-   **Using VS Code Live Server:**
-   - Install the "Live Server" extension
-   - Right-click `index.html`
-   - Select "Open with Live Server"
+2. Open `index.html` in your browser, or use a local server:
+```bash
+# Using Python
+python -m http.server 8000
 
-   **Using Python:**
-   ```powershell
-   python -m http.server 8000
-   ```
+# Using Node.js (http-server)
+npx http-server
 
-   **Using Node.js:**
-   ```powershell
-   npx http-server
-   ```
+# Using PHP
+php -S localhost:8000
+```
 
-4. Open your browser and navigate to the local server URL
+3. Navigate to `http://localhost:8000`
 
-## 🎨 Design System
+## 📱 Features
 
-### Brand Colors
+### For Users
+- **Digitized Health Histories**: Two-minute summarized health records
+- **Emergency Solutions**: Ambulance Connect, Accident Safe, SOS Button
+- **Health Management**: Medicine tracking, reminders, symptom logging
+- **Medical Awareness**: Educational programs and resources
 
-- **Primary Pink**: `#ff5598`
-- **Primary Dark**: `#e6498a`
-- **Primary Light**: `#ff78ad`
-- **White**: `#ffffff`
-- **Background Pink**: `#fff5f9`
+### For Healthcare Providers
+- **Time Savings**: Quick access to patient history
+- **Better Context**: Complete medical records at a glance
+- **Efficient Workflows**: Streamlined patient management
 
-### Typography
+## 🛠️ Development
 
-- **Font Family**: Inter (Google Fonts)
-- **Hero Size**: 3.5rem (responsive)
-- **H1 Size**: 2.5rem
-- **H2 Size**: 2rem
-- **Body Size**: 1rem
+### Modular Architecture
 
-### Spacing Scale
+The project uses a modular component-based architecture for easy maintenance:
 
-- XS: 0.5rem
-- SM: 1rem
-- MD: 2rem
-- LG: 3rem
-- XL: 4rem
-- 2XL: 6rem
+#### CSS Modules
+- `variables.css`: Central design tokens and CSS variables
+- `base.css`: Global resets and typography
+- Component-specific CSS files for navigation, buttons, cards, etc.
 
-## 🔧 Customization
+#### JavaScript Modules
+- `navigation.js`: Menu toggle, smooth scroll, navbar effects
+- `animations.js`: Scroll reveal, intersection observer
+- `utils.js`: Reusable utility functions
+- `app.js`: Main application initialization
 
-### Updating Content
+### Adding New Features
 
-All content is stored in modular HTML components in `src/components/`. Edit the relevant file to update content:
+1. **New Section**: Add HTML in `index.html`, styles in `css/sections.css`
+2. **New Component**: Create dedicated CSS file in `css/` folder
+3. **New Functionality**: Add module in `js/` folder and import in `app.js`
 
-- **Header/Navigation**: `src/components/header.html`
-- **Hero Section**: `src/components/hero.html`
-- **Problems**: `src/components/problems.html`
-- **Solutions**: `src/components/solutions.html`
-- **Benefits**: `src/components/benefits.html`
-- **CTA**: `src/components/cta.html`
-- **Footer**: `src/components/footer.html`
+### Customization
 
-### Updating Styles
+- **Colors**: Modify CSS variables in `css/variables.css`
+- **Typography**: Update font settings in `css/variables.css`
+- **Spacing**: Adjust spacing variables in `css/variables.css`
+- **Custom Styles**: Add to `styles.css` (project-specific overrides)
+- **Custom Scripts**: Add to `script.js` (project-specific functionality)
 
-Styles are organized by component in `src/css/`. Each section has its own CSS file:
-
-- **Global Variables**: `src/css/variables.css`
-- **Base Styles**: `src/css/reset.css`
-- **Component Styles**: Corresponding `.css` files
-
-### Updating Behavior
-
-JavaScript functionality is modular in `src/js/utils/`:
-
-- **Navigation**: `navigation.js`
-- **Smooth Scrolling**: `smoothScroll.js`
-- **Scroll Animations**: `scrollReveal.js`
-- **Component Loading**: `componentLoader.js`
-
-## 📱 Sections Overview
-
-### 1. Hero Section
-- Compelling headline
-- Key value propositions
-- Primary call-to-action buttons
-- Feature highlights
-
-### 2. Problems Section
-- Lost & mismanaged health records
-- Doctors' time wasted
-- Institutional data disappearing
-- Emergency unpreparedness
-- Current system gaps
-
-### 3. Solutions Section
-- Digitized health histories (2-min summary)
-- Institutional records management
-- Emergency solutions (Ambulance, Accident Safe, SOS)
-- Everyday health management
-- Medical awareness programs
-
-### 4. Benefits Section
-- For Doctors: More patients, better care
-- For Patients: Healthcare without hassle
-- For Hospitals: Efficiency meets excellence
-- Impact statistics
-
-### 5. Call-to-Action
-- Download app buttons
-- Contact information
-- Key features summary
-
-### 6. Footer
-- Brand information
-- Navigation links
-- Social media
-- Legal links
-
-## 🌐 Browser Support
+## 🎯 Browser Support
 
 - Chrome (latest)
 - Firefox (latest)
 - Safari (latest)
 - Edge (latest)
-- Mobile browsers
+- Mobile browsers (iOS Safari, Chrome Mobile)
+
+## 📈 Performance
+
+- Optimized CSS with modular loading
+- Intersection Observer for scroll animations
+- Debounced/throttled scroll events
+- Minimal JavaScript for fast load times
+- SVG graphics for scalable visuals
+
+## 🔧 Build & Deploy
+
+### GitHub Pages
+1. Push to main branch
+2. Enable GitHub Pages in repository settings
+3. Select main branch as source
+
+### Other Hosting
+Upload all files to your web host via FTP or deploy using:
+- Netlify
+- Vercel
+- AWS S3
+- Firebase Hosting
 
 ## 📄 License
 
-© 2025 s.e.h.a.t. All rights reserved.
+Copyright © 2025 s.e.h.a.t. All rights reserved.
 
 ## 🤝 Contributing
 
-For updates or improvements:
-1. Edit the relevant component files
-2. Test locally with a web server
-3. Ensure responsive design works
-4. Check all animations and interactions
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## 📞 Support
+## 📞 Contact
 
-For questions or issues, please contact the s.e.h.a.t team.
+For questions or support, please contact the s.e.h.a.t team.
 
 ---
 
-**Built with ❤️ for better healthcare in India**
+Built with ❤️ for better healthcare in India

@@ -1,0 +1,90 @@
+/* Base Styles - Reset and Global Elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: var(--font-size-base);
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--color-dark);
+  background-color: var(--color-white);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: var(--spacing-sm);
+}
+
+h1 { font-size: var(--font-size-h1); }
+h2 { font-size: var(--font-size-h2); }
+h3 { font-size: var(--font-size-h3); }
+h4 { font-size: var(--font-size-h4); }
+
+p {
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-gray);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition-fast);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+/* Section */
+section {
+  padding: var(--spacing-xl) 0;
+  position: relative;
+  width: 100%;
+  opacity: 1;
+  visibility: visible;
+  min-height: 400px;
+}
+
+section > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Utilities */
+.text-center { text-align: center; }
+.text-primary { color: var(--color-primary); }
+.bg-light { background-color: var(--color-light-gray); }
+.bg-primary { background-color: var(--color-primary); }
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  :root {
+    --font-size-h1: 2.5rem;
+    --font-size-h2: 2rem;
+    --font-size-h3: 1.5rem;
+  }
+
+  section {
+    padding: var(--spacing-lg) 0;
+  }
+}

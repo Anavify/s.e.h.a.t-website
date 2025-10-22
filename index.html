@@ -1,119 +1,700 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="s.e.h.a.t - Your comprehensive health companion for all your healthcare needs. Digitize health records, access emergency services, and manage your daily health with ease."
-    />
-    <meta
-      name="keywords"
-      content="healthcare, medical records, health tracking, emergency services, India healthcare, digital health"
-    />
-    <meta name="author" content="s.e.h.a.t" />
-    <meta name="theme-color" content="#ff5598" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="s.e.h.a.t - Your health companion for all your healthcare needs. Digitized health histories, emergency solutions, and everyday health management.">
+  <meta name="keywords" content="healthcare, health records, emergency services, ambulance, medical history, health management">
+  <meta name="author" content="s.e.h.a.t">
 
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="s.e.h.a.t - Your Health Companion" />
-    <meta
-      property="og:description"
-      content="Revolutionizing healthcare management in India with digitized health histories and emergency solutions."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://sehat.health" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="public/assets/s.e.h.a.t Branding/Icon 1 (Pink).svg">
 
-    <!-- Favicon -->
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="./Assets/s.e.h.a.t Branding/Icon 1 (Pink).svg"
-    />
-    <link
-      rel="apple-touch-icon"
-      href="./Assets/s.e.h.a.t Branding/Icon 1 (Pink).svg"
-    />
+  <title>s.e.h.a.t - Your Health Companion</title>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/buttons.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/stats.css">
+  <link rel="stylesheet" href="css/how-it-works.css">
+  <link rel="stylesheet" href="css/faq.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <!-- New Visual Section Styles -->
+  <link rel="stylesheet" href="css/problems-visual.css">
+  <link rel="stylesheet" href="css/steps-flow.css">
+  <link rel="stylesheet" href="css/features-visual.css">
+  <link rel="stylesheet" href="css/emergency-visual.css">
+  <link rel="stylesheet" href="css/benefits-visual.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="styles.css" />
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="navbar-brand">
+        <img src="public/assets/s.e.h.a.t Branding/Logo 1.svg" alt="s.e.h.a.t" class="navbar-logo">
+      </a>
 
-    <title>s.e.h.a.t - Your Health Companion for All Your Healthcare Needs</title>
+      <ul class="navbar-menu">
+        <li><a href="#problems">Challenges</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#solutions">Features</a></li>
+        <li><a href="#emergency">Emergency</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#cta" class="btn btn-primary">Get Started</a></li>
+      </ul>
 
-    <!-- Page Loader Styles -->
-    <style>
-      .page-loader {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(135deg, #ffffff 0%, #fff5f9 100%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 9999;
-        transition: opacity 0.3s ease;
-      }
-
-      .page-loader__spinner {
-        width: 50px;
-        height: 50px;
-        border: 4px solid rgba(255, 85, 152, 0.1);
-        border-top-color: #ff5598;
-        border-radius: 50%;
-        animation: spin 0.8s linear infinite;
-      }
-
-      @keyframes spin {
-        to {
-          transform: rotate(360deg);
-        }
-      }
-
-      body:not(.loaded) {
-        overflow: hidden;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Page Loader -->
-    <div class="page-loader">
-      <div class="page-loader__spinner"></div>
+      <button class="navbar-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
+  </nav>
 
-    <!-- Header Container -->
-    <div id="header-container"></div>
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Your <span class="highlight">Health Companion</span> for All Your Healthcare Needs</h1>
+          <p>Simplifying healthcare with digitized health histories, instant emergency solutions, and everyday health management—all in one place.</p>
+          <div class="hero-cta">
+            <button class="btn btn-primary btn-lg" data-cta="get-started">Get Started</button>
+            <button class="btn btn-outline btn-lg" data-cta="learn-more">Learn More</button>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <svg class="hero-illustration" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+            <!-- Background circles with gradient -->
+            <defs>
+              <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#FF5893;stop-opacity:0.3" />
+                <stop offset="100%" style="stop-color:#FF7AB5;stop-opacity:0.1" />
+              </linearGradient>
+              <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#FF5893;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#FF7AB5;stop-opacity:1" />
+              </linearGradient>
+              <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#E63980;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#FF5893;stop-opacity:1" />
+              </linearGradient>
+              <filter id="glow">
+                <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                <feMerge>
+                  <feMergeNode in="coloredBlur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+            </defs>
 
-    <!-- Main Content -->
-    <main>
-      <!-- Hero Section -->
-      <div id="hero-container"></div>
+            <!-- Decorative circles -->
+            <circle cx="100" cy="150" r="40" fill="url(#gradient1)" opacity="0.6"/>
+            <circle cx="400" cy="180" r="50" fill="url(#gradient1)" opacity="0.5"/>
+            <circle cx="350" cy="420" r="45" fill="url(#gradient1)" opacity="0.6"/>
+            <circle cx="80" cy="380" r="35" fill="url(#gradient1)" opacity="0.5"/>
 
-      <!-- Problems Section -->
-      <div id="problems-container"></div>
+            <!-- Medical Cross with gradient and glow -->
+            <g filter="url(#glow)">
+              <rect x="220" y="140" width="60" height="220" fill="url(#gradient2)" rx="12"/>
+              <rect x="140" y="220" width="220" height="60" fill="url(#gradient2)" rx="12"/>
+              <!-- Center circle -->
+              <circle cx="250" cy="250" r="45" fill="url(#gradient3)"/>
+              <circle cx="250" cy="250" r="30" fill="white" opacity="0.3"/>
+            </g>
 
-      <!-- Solutions Section -->
-      <div id="solutions-container"></div>
+            <!-- Heart Monitor Line with gradient -->
+            <path d="M 50 320 Q 100 320 125 270 T 150 360 Q 165 320 200 320 Q 300 320 350 280 T 450 320"
+                  stroke="url(#gradient2)" stroke-width="5" fill="none" stroke-linecap="round" filter="url(#glow)"/>
 
-      <!-- Benefits Section -->
-      <div id="benefits-container"></div>
+            <!-- Plus signs -->
+            <g fill="url(#gradient2)" opacity="0.7">
+              <rect x="435" y="100" width="4" height="20" rx="2"/>
+              <rect x="426" y="109" width="20" height="4" rx="2"/>
 
-      <!-- CTA Section -->
-      <div id="cta-container"></div>
-    </main>
+              <rect x="60" y="100" width="4" height="20" rx="2"/>
+              <rect x="51" y="109" width="20" height="4" rx="2"/>
 
-    <!-- Footer Container -->
-    <div id="footer-container"></div>
+              <rect x="420" y="400" width="4" height="20" rx="2"/>
+              <rect x="411" y="409" width="20" height="4" rx="2"/>
+            </g>
 
-    <!-- Scripts -->
-    <script type="module" src="script.js"></script>
-  </body>
+            <!-- Heartbeat dots -->
+            <circle cx="100" cy="320" r="6" fill="url(#gradient3)"/>
+            <circle cx="200" cy="320" r="6" fill="url(#gradient3)"/>
+            <circle cx="350" cy="280" r="6" fill="url(#gradient3)"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section id="stats" class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item scroll-reveal">
+          <div class="stat-number" data-count="30">0</div>
+          <div class="stat-label">% Time Saved</div>
+          <div class="stat-description">For doctors reviewing patient histories</div>
+        </div>
+        <div class="stat-item scroll-reveal">
+          <div class="stat-number" data-count="2">0</div>
+          <div class="stat-suffix">x</div>
+          <div class="stat-label">Faster Emergency Response</div>
+          <div class="stat-description">With instant ambulance connect</div>
+        </div>
+        <div class="stat-item scroll-reveal">
+          <div class="stat-number" data-count="100">0</div>
+          <div class="stat-suffix">%</div>
+          <div class="stat-label">Health Records Access</div>
+          <div class="stat-description">Anytime, anywhere digital access</div>
+        </div>
+        <div class="stat-item scroll-reveal">
+          <div class="stat-number">24/7</div>
+          <div class="stat-label">Emergency Support</div>
+          <div class="stat-description">Always available when you need it</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problems Section -->
+  <section id="problems">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">The Challenge</span>
+        <h2>Healthcare Gaps We're Solving</h2>
+        <p class="subtitle">India's healthcare system faces critical challenges that affect millions daily</p>
+      </div>
+
+      <div class="problems-timeline">
+        <div class="problem-item scroll-reveal" data-index="1">
+          <div class="problem-visual">
+            <div class="problem-icon-wrapper">
+              <span class="problem-emoji">📋</span>
+              <div class="problem-pulse"></div>
+            </div>
+          </div>
+          <div class="problem-content">
+            <h3 class="problem-title">Lost & Mismanaged Health Records</h3>
+            <p class="problem-description">Patients struggle to keep track of their medical history. Prescriptions and reports are often misplaced, leaving them unable to maintain a consistent record of their health journey.</p>
+            <div class="problem-stats">30%+ Records Lost Annually</div>
+          </div>
+        </div>
+
+        <div class="problem-item scroll-reveal" data-index="2">
+          <div class="problem-visual">
+            <div class="problem-icon-wrapper">
+              <span class="problem-emoji">⏱️</span>
+              <div class="problem-pulse"></div>
+            </div>
+          </div>
+          <div class="problem-content">
+            <h3 class="problem-title">Doctors' Time Wasted on Inconsistent Records</h3>
+            <p class="problem-description">Over 30% of doctors' consultation time is spent navigating through incomplete or inconsistent patient records—time that should go into diagnosis and treatment.</p>
+            <div class="problem-stats">30% Consultation Time Wasted</div>
+          </div>
+        </div>
+
+        <div class="problem-item scroll-reveal" data-index="3">
+          <div class="problem-visual">
+            <div class="problem-icon-wrapper">
+              <span class="problem-emoji">🏫</span>
+              <div class="problem-pulse"></div>
+            </div>
+          </div>
+          <div class="problem-content">
+            <h3 class="problem-title">Institutional Health Data Disappears</h3>
+            <p class="problem-description">Schools, colleges, and corporates conduct mandatory medical checkups, yet these records usually end up lost or discarded, creating massive gaps in long-term healthcare tracking.</p>
+            <div class="problem-stats">Millions of Records Discarded</div>
+          </div>
+        </div>
+
+        <div class="problem-item scroll-reveal" data-index="4">
+          <div class="problem-visual">
+            <div class="problem-icon-wrapper">
+              <span class="problem-emoji">🚨</span>
+              <div class="problem-pulse"></div>
+            </div>
+          </div>
+          <div class="problem-content">
+            <h3 class="problem-title">Unprepared for Emergencies</h3>
+            <p class="problem-description">In accidents and unforeseen situations, people are unsure of the right steps to take. Ambulance bookings are delayed due to repeated information-sharing, wasting precious minutes.</p>
+            <div class="problem-stats">Critical Minutes Lost</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">How It Works</span>
+        <h2>Get Started in Minutes</h2>
+        <p class="subtitle">Your journey to better healthcare management in four simple steps</p>
+      </div>
+
+      <div class="steps-flow">
+        <svg class="flow-connector" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:#FF5893;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#FF7AB5;stop-opacity:1" />
+            </linearGradient>
+          </defs>
+          <path class="flow-path" d="M 100 200 Q 400 100 600 200 T 1100 200" stroke="url(#lineGradient)" stroke-width="3" fill="none"/>
+        </svg>
+
+        <div class="step-flow-item scroll-reveal" data-step="1">
+          <div class="step-visual">
+            <div class="step-orbit">
+              <div class="step-orb"></div>
+            </div>
+            <div class="step-badge">01</div>
+          </div>
+          <div class="step-info">
+            <h3 class="step-heading">Create Your Profile</h3>
+            <p class="step-text">Sign up and set up your health profile in minutes. Add your basic health information and emergency contacts.</p>
+          </div>
+        </div>
+
+        <div class="step-flow-item scroll-reveal" data-step="2">
+          <div class="step-visual">
+            <div class="step-orbit">
+              <div class="step-orb"></div>
+            </div>
+            <div class="step-badge">02</div>
+          </div>
+          <div class="step-info">
+            <h3 class="step-heading">Digitize Health Records</h3>
+            <p class="step-text">Upload or scan your medical reports. Our system creates a comprehensive 2-minute health summary accessible to authorized doctors.</p>
+          </div>
+        </div>
+
+        <div class="step-flow-item scroll-reveal" data-step="3">
+          <div class="step-visual">
+            <div class="step-orbit">
+              <div class="step-orb"></div>
+            </div>
+            <div class="step-badge">03</div>
+          </div>
+          <div class="step-info">
+            <h3 class="step-heading">Connect with Healthcare</h3>
+            <p class="step-text">Visit any partnered hospital or clinic. Doctors get instant access to your complete health history without paperwork.</p>
+          </div>
+        </div>
+
+        <div class="step-flow-item scroll-reveal" data-step="4">
+          <div class="step-visual">
+            <div class="step-orbit">
+              <div class="step-orb"></div>
+            </div>
+            <div class="step-badge">04</div>
+          </div>
+          <div class="step-info">
+            <h3 class="step-heading">Stay Protected 24/7</h3>
+            <p class="step-text">Access emergency services, track medications, monitor vitals, and manage your health journey—all from one platform.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solutions/Features Section -->
+  <section id="solutions">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Impact</span>
+        <h2>Everything You Need for Complete Healthcare</h2>
+        <p class="subtitle">Comprehensive tools that work seamlessly together</p>
+      </div>
+
+      <div class="features-showcase">
+        <div class="feature-item scroll-reveal" data-feature="1">
+          <div class="feature-graphic">
+            <div class="feature-circle">
+              <svg viewBox="0 0 100 100" class="feature-svg">
+                <circle cx="50" cy="50" r="45" fill="url(#gradient2)"/>
+                <text x="50" y="60" text-anchor="middle" font-size="40" fill="white">📱</text>
+              </svg>
+              <div class="feature-ring"></div>
+            </div>
+          </div>
+          <div class="feature-details">
+            <h3 class="feature-name">Digitized Health Histories</h3>
+            <p class="feature-desc">Instead of storing bulky records, s.e.h.a.t creates a two-minute summarized health history for every patient—quick, portable, and accessible for doctors anytime.</p>
+            <div class="feature-highlight">2-Min Summaries</div>
+          </div>
+        </div>
+
+        <div class="feature-item scroll-reveal" data-feature="2">
+          <div class="feature-graphic">
+            <div class="feature-circle">
+              <svg viewBox="0 0 100 100" class="feature-svg">
+                <circle cx="50" cy="50" r="45" fill="url(#gradient2)"/>
+                <text x="50" y="60" text-anchor="middle" font-size="40" fill="white">🏢</text>
+              </svg>
+              <div class="feature-ring"></div>
+            </div>
+          </div>
+          <div class="feature-details">
+            <h3 class="feature-name">Institutional Integration</h3>
+            <p class="feature-desc">For schools, colleges, corporates, and housing colonies, s.e.h.a.t digitizes medical records and installs medical kiosks to ensure residents can access all healthcare benefits.</p>
+            <div class="feature-highlight">Smart Kiosks</div>
+          </div>
+        </div>
+
+        <div class="feature-item scroll-reveal" data-feature="3">
+          <div class="feature-graphic">
+            <div class="feature-circle">
+              <svg viewBox="0 0 100 100" class="feature-svg">
+                <circle cx="50" cy="50" r="45" fill="url(#gradient2)"/>
+                <text x="50" y="60" text-anchor="middle" font-size="40" fill="white">💊</text>
+              </svg>
+              <div class="feature-ring"></div>
+            </div>
+          </div>
+          <div class="feature-details">
+            <h3 class="feature-name">Everyday Health Management</h3>
+            <p class="feature-desc">Track medicines, set reminders, log symptoms, and monitor vitals—keeping patients in control of their daily health.</p>
+            <div class="feature-highlight">Daily Tracking</div>
+          </div>
+        </div>
+
+        <div class="feature-item scroll-reveal" data-feature="4">
+          <div class="feature-graphic">
+            <div class="feature-circle">
+              <svg viewBox="0 0 100 100" class="feature-svg">
+                <circle cx="50" cy="50" r="45" fill="url(#gradient2)"/>
+                <text x="50" y="60" text-anchor="middle" font-size="40" fill="white">📚</text>
+              </svg>
+              <div class="feature-ring"></div>
+            </div>
+          </div>
+          <div class="feature-details">
+            <h3 class="feature-name">Medical Awareness Programs</h3>
+            <p class="feature-desc">Organized awareness programs to educate communities and promote proactive healthcare for better long-term outcomes.</p>
+            <div class="feature-highlight">Community Education</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Emergency Features Section -->
+  <section id="emergency">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Critical Care</span>
+        <h2>Emergency Solutions That Save Lives</h2>
+        <p class="subtitle">Instant help when every second counts</p>
+      </div>
+
+      <div class="emergency-grid">
+        <div class="emergency-item scroll-reveal" data-emergency="1">
+          <div class="emergency-visual">
+            <div class="emergency-hexagon">
+              <div class="hex-pulse pulse-1"></div>
+              <div class="hex-pulse pulse-2"></div>
+              <div class="hex-pulse pulse-3"></div>
+              <div class="emergency-icon">🚑</div>
+            </div>
+          </div>
+          <h3 class="emergency-title">Ambulance Connect</h3>
+          <p class="emergency-desc">Instantly links you to the nearest ambulance, eliminating delays from repeated information-sharing.</p>
+          <div class="emergency-badge">Instant Access</div>
+        </div>
+
+        <div class="emergency-item scroll-reveal" data-emergency="2">
+          <div class="emergency-visual">
+            <div class="emergency-hexagon">
+              <div class="hex-pulse pulse-1"></div>
+              <div class="hex-pulse pulse-2"></div>
+              <div class="hex-pulse pulse-3"></div>
+              <div class="emergency-icon">⚠️</div>
+            </div>
+          </div>
+          <h3 class="emergency-title">Accident Safe</h3>
+          <p class="emergency-desc">Report accidents (self or nearby), alerting both medical and police services for immediate response.</p>
+          <div class="emergency-badge">Dual Alert</div>
+        </div>
+
+        <div class="emergency-item scroll-reveal" data-emergency="3">
+          <div class="emergency-visual">
+            <div class="emergency-hexagon">
+              <div class="hex-pulse pulse-1"></div>
+              <div class="hex-pulse pulse-2"></div>
+              <div class="hex-pulse pulse-3"></div>
+              <div class="emergency-icon">🆘</div>
+            </div>
+          </div>
+          <h3 class="emergency-title">SOS Button</h3>
+          <p class="emergency-desc">One-tap emergency contact system for quick help, notifying your emergency contacts instantly.</p>
+          <div class="emergency-badge">One-Tap</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section id="benefits">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Value We Deliver</span>
+        <h2>Benefits for Everyone</h2>
+        <p class="subtitle">Making healthcare better for patients, doctors, and hospitals</p>
+      </div>
+
+      <div class="benefits-container">
+        <div class="benefit-column scroll-reveal" data-benefit="1">
+          <div class="benefit-visual-wrapper">
+            <div class="benefit-bg-shape"></div>
+            <div class="benefit-icon-large">👨‍⚕️</div>
+            <div class="benefit-particles">
+              <span class="particle"></span>
+              <span class="particle"></span>
+              <span class="particle"></span>
+            </div>
+          </div>
+          <h3 class="benefit-heading">For Doctors</h3>
+          <div class="benefit-list">
+            <div class="benefit-point">
+              <span class="check-icon">✓</span>
+              <span>More patients daily</span>
+            </div>
+            <div class="benefit-point">
+              <span class="check-icon">✓</span>
+              <span>Better clinical context</span>
+            </div>
+            <div class="benefit-point">
+              <span class="check-icon">✓</span>
+              <span>Complete medical histories</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="benefit-column scroll-reveal" data-benefit="2">
+          <div class="benefit-visual-wrapper">
+            <div class="benefit-bg-shape"></div>
+            <div class="benefit-icon-large">👤</div>
+            <div class="benefit-particles">
+              <span class="particle"></span>
+              <span class="particle"></span>
+              <span class="particle"></span>
+            </div>
+          </div>
+          <h3 class="benefit-heading">For Patients</h3>
+          <div class="benefit-list">
+            <div class="benefit-point">
+              <span class="check-icon">✓</span>
+              <span>No physical files</span>
+            </div>
+            <div class="benefit-point">
+              <span class="check-icon">✓</span>
+              <span>Always accessible</span>
+            </div>
+            <div class="benefit-point">
+              <span class="check-icon">✓</span>
+              <span>Instant health data</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="benefit-column scroll-reveal" data-benefit="3">
+          <div class="benefit-visual-wrapper">
+            <div class="benefit-bg-shape"></div>
+            <div class="benefit-icon-large">🏥</div>
+            <div class="benefit-particles">
+              <span class="particle"></span>
+              <span class="particle"></span>
+              <span class="particle"></span>
+            </div>
+          </div>
+          <h3 class="benefit-heading">For Hospitals</h3>
+          <div class="benefit-list">
+            <div class="benefit-point">
+              <span class="check-icon">✓</span>
+              <span>Increased turnover</span>
+            </div>
+            <div class="benefit-point">
+              <span class="check-icon">✓</span>
+              <span>Streamlined workflows</span>
+            </div>
+            <div class="benefit-point">
+              <span class="check-icon">✓</span>
+              <span>Time efficiency</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">FAQ</span>
+        <h2>Frequently Asked Questions</h2>
+        <p class="subtitle">Everything you need to know about s.e.h.a.t</p>
+      </div>
+
+      <div class="faq-container">
+        <div class="faq-item scroll-reveal">
+          <button class="faq-question">
+            <span>How quickly can I get started with s.e.h.a.t?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>You can get started in as little as 5 minutes. Simply download the app, create your profile, and begin uploading your health records. Our intuitive interface guides you through each step.</p>
+          </div>
+        </div>
+
+        <div class="faq-item scroll-reveal">
+          <button class="faq-question">
+            <span>Is my medical data secure with s.e.h.a.t?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Absolutely. We use enterprise-grade encryption and comply with all healthcare data security standards including HIPAA. Your data is never shared without your explicit consent and remains completely confidential.</p>
+          </div>
+        </div>
+
+        <div class="faq-item scroll-reveal">
+          <button class="faq-question">
+            <span>Which hospitals and clinics can access my records?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Only healthcare providers you authorize can access your records. We're partnered with thousands of hospitals, clinics, and healthcare facilities across India. You have complete control over who sees your data.</p>
+          </div>
+        </div>
+
+        <div class="faq-item scroll-reveal">
+          <button class="faq-question">
+            <span>How does the emergency SOS feature work?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>The SOS button instantly alerts your emergency contacts and connects you to the nearest ambulance service. It also shares your location and critical health information with emergency responders to save precious time.</p>
+          </div>
+        </div>
+
+        <div class="faq-item scroll-reveal">
+          <button class="faq-question">
+            <span>Can I use s.e.h.a.t for my entire family?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes! You can create and manage profiles for all your family members from a single account. This is especially helpful for managing children's health records or elderly parents' medical information.</p>
+          </div>
+        </div>
+
+        <div class="faq-item scroll-reveal">
+          <button class="faq-question">
+            <span>What makes s.e.h.a.t different from other health apps?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>s.e.h.a.t combines health record management, emergency services, institutional integration, and daily health tracking in one comprehensive platform. We focus on real-world healthcare challenges in India with solutions designed for Indian users.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section id="cta">
+    <div class="container">
+      <h2>Ready to Transform Your Healthcare Experience?</h2>
+      <p>Join thousands who trust s.e.h.a.t for their health management</p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; margin-bottom: 2rem;">
+        <button class="btn btn-white btn-lg" data-cta="get-started">Get Started Free</button>
+        <button class="btn btn-outline btn-lg" data-cta="contact">Watch Demo</button>
+      </div>
+      <div class="cta-features">
+        <div class="cta-feature">
+          <span class="cta-icon">✓</span>
+          <span>No credit card required</span>
+        </div>
+        <div class="cta-feature">
+          <span class="cta-icon">✓</span>
+          <span>5-minute setup</span>
+        </div>
+        <div class="cta-feature">
+          <span class="cta-icon">✓</span>
+          <span>24/7 support</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="public/assets/s.e.h.a.t Branding/Logo 1.svg" alt="s.e.h.a.t" class="footer-logo">
+          <p class="footer-description">Your trusted health companion for comprehensive healthcare management and emergency solutions.</p>
+        </div>
+
+        <div class="footer-section">
+          <h4>Product</h4>
+          <ul class="footer-links">
+            <li><a href="#solutions">Features</a></li>
+            <li><a href="#emergency">Emergency</a></li>
+            <li><a href="#benefits">Benefits</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#careers">Careers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Legal</h4>
+          <ul class="footer-links">
+            <li><a href="#privacy">Privacy Policy</a></li>
+            <li><a href="#terms">Terms of Service</a></li>
+            <li><a href="#security">Security</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2025 s.e.h.a.t. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="Facebook">f</a>
+          <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+          <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+          <a href="#" class="social-link" aria-label="Instagram">📷</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript Files -->
+  <script src="js/utils.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/faq.js"></script>
+  <script src="js/app.js"></script>
+  <script src="script.js"></script>
+</body>
 </html>

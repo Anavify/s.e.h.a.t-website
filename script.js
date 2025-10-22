@@ -1,82 +1,28 @@
-// Main Script - Import and initialize all modules
-import { initNavigation } from "./src/js/utils/navigation.js";
-import { initSmoothScroll } from "./src/js/utils/smoothScroll.js";
-import { initScrollReveal, addRevealClass } from "./src/js/utils/scrollReveal.js";
-import { loadAllComponents } from "./src/js/utils/componentLoader.js";
+// Custom JavaScript - Project Specific Functionality
+// Add any custom functionality specific to s.e.h.a.t here
 
-// Initialize the application
-async function init() {
-  try {
-    // Load all components
-    await loadAllComponents();
-
-    // Initialize utilities after components are loaded
-    initNavigation();
-    initSmoothScroll();
-    addRevealClass();
-    initScrollReveal();
-
-    // Initialize scroll to top button
-    initScrollToTop();
-
-    // Add loading animation
-    document.body.classList.add("loaded");
-  } catch (error) {
-    console.error("Error initializing application:", error);
-  }
+// Example: Analytics tracking
+function trackEvent(eventName, eventData) {
+  console.log('Event tracked:', eventName, eventData);
+  // Add your analytics tracking code here (Google Analytics, Mixpanel, etc.)
 }
 
-// Scroll to top button functionality
-function initScrollToTop() {
-  // Create scroll to top button
-  const scrollButton = document.createElement("button");
-  scrollButton.className = "scroll-to-top";
-  scrollButton.innerHTML = "↑";
-  scrollButton.setAttribute("aria-label", "Scroll to top");
-  document.body.appendChild(scrollButton);
+// Example: Form handling
+function handleFormSubmit(formData) {
+  console.log('Form submitted:', formData);
+  // Add your form submission logic here
+}
 
-  // Show/hide button based on scroll position
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 500) {
-      scrollButton.classList.add("visible");
-    } else {
-      scrollButton.classList.remove("visible");
-    }
-  });
+// Example: Custom interactions
+document.addEventListener('DOMContentLoaded', function() {
+  // Add custom event listeners or functionality here
+  console.log('Custom scripts loaded');
 
-  // Scroll to top on click
-  scrollButton.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
+  // Track CTA button clicks
+  const ctaButtons = document.querySelectorAll('[data-cta]');
+  ctaButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      trackEvent('cta_click', { action: this.getAttribute('data-cta') });
     });
   });
-}
-
-// Run when DOM is ready
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", init);
-} else {
-  init();
-}
-
-// Page loading indicator
-window.addEventListener("load", () => {
-  const loader = document.querySelector(".page-loader");
-  if (loader) {
-    loader.style.opacity = "0";
-    setTimeout(() => {
-      loader.style.display = "none";
-    }, 300);
-  }
-});
-
-// Handle errors globally
-window.addEventListener("error", (event) => {
-  console.error("Global error:", event.error);
-});
-
-// Handle unhandled promise rejections
-window.addEventListener("unhandledrejection", (event) => {
-  console.error("Unhandled promise rejection:", event.reason);
 });

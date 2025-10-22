@@ -1,0 +1,280 @@
+/* Benefits Section - Icon Column Design */
+#benefits {
+  background: linear-gradient(135deg, #FFF5F9 0%, #FFE8F1 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 5rem 0;
+}
+
+#benefits .container {
+  position: relative;
+  z-index: 10;
+}
+
+#benefits::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255, 88, 147, 0.1), transparent 70%);
+  border-radius: 50%;
+  filter: blur(60px);
+}
+
+#benefits::after {
+  content: '';
+  position: absolute;
+  bottom: 20%;
+  right: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255, 122, 181, 0.1), transparent 70%);
+  border-radius: 50%;
+  filter: blur(60px);
+}
+
+.benefits-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin-top: 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.benefit-column {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.benefit-column.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.benefit-column:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.benefit-column:nth-child(3) {
+  transition-delay: 0.4s;
+}
+
+.benefit-visual-wrapper {
+  position: relative;
+  margin-bottom: 2rem;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.benefit-bg-shape {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  background: linear-gradient(135deg, rgba(255, 88, 147, 0.1), rgba(255, 122, 181, 0.2));
+  border-radius: 40px;
+  transform: rotate(45deg);
+  transition: all 0.5s ease;
+}
+
+.benefit-icon-large {
+  font-size: 5rem;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 10px 30px rgba(255, 88, 147, 0.3));
+  transition: all 0.4s ease;
+  animation: float 4s ease-in-out infinite;
+}
+
+.benefit-particles {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #FF5893;
+  border-radius: 50%;
+  opacity: 0;
+  animation: particle-float 3s ease-in-out infinite;
+}
+
+.particle:nth-child(1) {
+  top: 20%;
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.particle:nth-child(2) {
+  top: 30%;
+  right: 20%;
+  animation-delay: 1s;
+}
+
+.particle:nth-child(3) {
+  bottom: 30%;
+  left: 30%;
+  animation-delay: 2s;
+}
+
+@keyframes particle-float {
+  0%, 100% {
+    opacity: 0;
+    transform: translateY(0) scale(0.5);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(-30px) scale(1);
+  }
+}
+
+.benefit-heading {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 2rem;
+  line-height: 1.3;
+  position: relative;
+}
+
+.benefit-heading::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #FF5893, #FF7AB5);
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+.benefit-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.benefit-point {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 15px;
+  width: 100%;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.benefit-point:hover {
+  transform: translateX(10px);
+  border-color: #FF5893;
+  box-shadow: 0 10px 30px rgba(255, 88, 147, 0.2);
+}
+
+.check-icon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  background: linear-gradient(135deg, #FF5893, #FF7AB5);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.benefit-point span:last-child {
+  color: #333;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* Hover effects */
+.benefit-column:hover .benefit-bg-shape {
+  transform: rotate(45deg) scale(1.1);
+  background: linear-gradient(135deg, rgba(255, 88, 147, 0.2), rgba(255, 122, 181, 0.3));
+}
+
+.benefit-column:hover .benefit-icon-large {
+  transform: scale(1.15) rotate(5deg);
+  filter: drop-shadow(0 15px 40px rgba(255, 88, 147, 0.5));
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+  .benefits-container {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .benefit-visual-wrapper {
+    height: 180px;
+  }
+
+  .benefit-bg-shape {
+    width: 140px;
+    height: 140px;
+  }
+
+  .benefit-icon-large {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #benefits {
+    padding: 3rem 0;
+  }
+
+  .benefit-visual-wrapper {
+    height: 150px;
+  }
+
+  .benefit-bg-shape {
+    width: 120px;
+    height: 120px;
+  }
+
+  .benefit-icon-large {
+    font-size: 3.5rem;
+  }
+
+  .benefit-heading {
+    font-size: 1.5rem;
+  }
+
+  .benefit-point {
+    padding: 0.8rem 1.2rem;
+  }
+
+  .check-icon {
+    width: 24px;
+    height: 24px;
+    font-size: 0.9rem;
+  }
+
+  .benefit-point span:last-child {
+    font-size: 0.9rem;
+  }
+}
