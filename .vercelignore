@@ -1,0 +1,12 @@
+node_modules
+.git
+.env
+*.log
+.DS_Store
+restart-server.ps1
+start.bat
+start.ps1
+start.sh
+validate-routes.ps1
+docs/
+README.md
